@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffd1a44d;
+  color: #333;
+  padding: 2em;
+  margin: 0;
+}
+
+header {
+  margin-bottom: 2em;
+  text-align: center;
+  padding-bottom: .5em;
+  padding-top: 1em;
+  border: #7da58c;
+  position: relative; /* Ensure header doesn't move */
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #7da58c;
+}
+
+header h2 {
+  font-size: 1.2em;
+  color: #7da58c;
+  font-weight: normal;
+}
+
+/* Top Navbar */
+.navbar {
+  position: fixed;
+  top: 0.5rem;  /* Adjust top to make it smaller */
+  right: 0.5rem;
+  padding: 0.5em 1em;  /* Reduced padding to keep it smaller */
+  background-color: #fffaf5;
+  border-radius: 20px;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em; /* Space between links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #7da58c;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff9966; /* Peach color on hover */
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 153, 102, 0.2);
+}
+
+main h1, h2, h3, h4 {
+  margin-top: 1.5em;
+  color: #7da58c;
+}
+
+hr {
+  margin: 2em 0;
+  border: none;
+  border-top: 2px solid #ff9966;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 1.5em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+figure {
+  text-align: center;
+  margin: 2em 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 2em auto;
+  border: none;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4em;
+  font-size: 0.9em;
+  color: #777;
+  border-top: 1px solid #ffd1a4;
+  padding-top: 1em;
+}
+
+/* Side Navbar */
+.side-navbar {
+  position: fixed;
+  top: 300px; /* Adjusted for small screens */
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #fffaf5;
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+.side-nav-list li {
+  border-bottom: 2px solid #ffd1a4;
+  padding-bottom: 0.5em;
+  width: 100%;
+}
+
+.side-nav-list li:last-child {
+  border-bottom: none;
+}
+
+.side-nav-list .nav-link {
+  color: #7da58c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  display: block;
+  text-align: center;
+}
+
+.side-nav-list .nav-link:hover {
+  color: #f6b788;
+}
+
+/* Mobile styles */
+@media (max-width: 1000px) {
+  header {
+    padding-top: 5rem; /* Added padding to ensure space for fixed navbar */
+  }
+
+  .navbar {
+    top: 1rem; /* Adjusted so top navbar has space from the top */
+    z-index: 1001;
+    width: calc(100% - 2rem); /* Ensure navbar fits on the screen */
+    padding: .5em;
+  }
+
+  .side-navbar {
+    position: fixed;
+    top: 4rem; /* Place below the top navbar */
+    left: 0;
+    transform: none;
+    width: 100%;
+    margin-top: 0;
+    padding: 0.5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #fffaf5;
+    z-index: 999;
+  }
+
+  .side-nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    width: 100%;
+  }
+
+  .side-nav-list li {
+    border: none;
+    padding: 0.5em;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1001;
+  }
+}
+
+/* Ensure space between header and content on larger screens */
+@media (min-width: 769px) {
+  header {
+    margin-bottom: 3rem; /* Extra margin for large screens */
+  }
+}

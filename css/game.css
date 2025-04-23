@@ -1,0 +1,159 @@
+/* Reset and layout setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffd1a44d; /* light peach */
+    color: #333;
+    overflow: hidden; /* prevent scrolling */
+    display: flex;
+    flex-direction: column; /* Stack navbar and body vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align the body content at the top */
+    padding-top: 60px; /* Bring the game container closer to the navbar */
+  }
+  
+  /* Centered game container */
+  #game-container {
+    background-color: #fffaf5; /* soft cream */
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 153, 102, 0.2);
+    display: flex;
+    flex-direction: row; /* Align game board and score side-by-side */
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Width of the container */
+    width: 90vw; /* Relative width based on screen */
+    margin-top: 10px; /* Reduce the space between the navbar and game */
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    color: #7da58c;
+  }
+  
+  /* Game board */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+    gap: 8px;
+    background-color: #fffaf5;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  
+  /* Tiles */
+  .tile {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background-color: #fffaf5;
+    color: #7da58c;
+    box-shadow: inset 0 0 4px rgba(125, 165, 140, 0.2);
+  }
+  
+  .tile-0 {
+    background-color: #ffeede;
+    color: transparent;
+  }
+  
+  .tile-2    { background-color: #ffe5d0; color: #7da58c; }
+  .tile-4    { background-color: #ffdab5; color: #7da58c; }
+  .tile-8    { background-color: #ffc89b; color: white; }
+  .tile-16   { background-color: #f6b788; color: white; }
+  .tile-32   { background-color: #ff9966; color: white; }
+  .tile-64   { background-color: #e9855c; color: white; }
+  .tile-128  { background-color: #d57449; color: white; }
+  .tile-256  { background-color: #c9653c; color: white; }
+  .tile-512  { background-color: #b3562f; color: white; }
+  .tile-1024 { background-color: #9d4a26; color: white; }
+  .tile-2048 { background-color: #7da58c; color: #fffaf5; }
+  
+  /* Score container */
+  #score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px; /* Space between game and score */
+  }
+  
+  /* Score */
+  #score {
+    font-size: 1.1em;
+    color: #7da58c;
+    margin-top: 1em;
+  }
+  
+  /* Button */
+  #restart {
+    margin-top: 1em;
+    padding: 8px 16px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #fffaf5;
+    border: 2px solid #ff9966;
+    color: #7da58c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #restart:hover {
+    background-color: #ff9966;
+    color: white;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    margin: 1em;
+    background-color: #fffaf5;
+    border-radius: 20px;
+    z-index: 10; /* Ensure it stays on top of the page content */
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5em; /* Space between links */
+    border-left: #ff9966;
+  }
+  
+  /* Optional: basic link styling */
+  .nav-link {
+    text-decoration: none;
+    color: #7da58c;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover {
+    color: #ff9966; /* Peach color on hover */
+  }
+  

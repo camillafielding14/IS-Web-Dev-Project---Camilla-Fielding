@@ -1,0 +1,65 @@
+.navbar {
+    background-color: #f6b788 !important; /* Override navbar background */
+}
+.lastname{
+    color: #7da58c;
+}
+ul.checklist {
+    list-style: none; /* Remove default bullets */
+    padding-left: 1.2em; /* Space for custom icon */
+}
+
+ul.checklist li::before {
+    content: "\2713"; /* Unicode checkmark */
+    color: #7da58c !important; /* Change this to whatever color you like */
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+.email{
+    color: #7da58c;
+}
+.email:hover{
+    color: #f6b788;
+}
+/* Position the navbar in the top-right corner */
+.topnavbar {
+    position: absolute; /* Or use fixed if you want it to stay while scrolling */
+    top: 0;
+    right: 0;
+    padding: 1em;
+}
+
+/* Remove default list styles and lay items horizontally */
+.topnav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5em; /* Space between links */
+}
+
+/* Optional: basic link styling */
+.topnav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.topnav-link:hover {
+    color: #ff9966; /* Peach color on hover */
+}
+/* Apply a custom font to the whole page */
+html {
+    margin: 10px;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
